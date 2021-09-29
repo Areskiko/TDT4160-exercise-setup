@@ -651,7 +651,7 @@ END GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtend.o
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
 
-.text           0x0000000000000000     0x1338
+.text           0x0000000000000000     0x136c
  *(.vectors)
  .vectors       0x0000000000000000       0xdc build/startup_efm32gg.o
                 0x0000000000000000                __Vectors
@@ -786,33 +786,32 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
                 0x0000000000000fd0                DMA_IRQHandler
                 0x0000000000000fd0                BusFault_Handler
                 0x0000000000000fd0                USART2_TX_IRQHandler
- .text          0x0000000000000fd4        0x2 build/o1.o
+ .text          0x0000000000000fd4       0x38 build/o1.o
                 0x0000000000000fd4                Start
- *fill*         0x0000000000000fd6        0x2 
- .text          0x0000000000000fd8        0xc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-atexit.o)
-                0x0000000000000fd8                atexit
- .text          0x0000000000000fe4       0x28 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-exit.o)
-                0x0000000000000fe4                exit
- .text          0x000000000000100c       0x34 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fini.o)
-                0x000000000000100c                __libc_fini_array
- .text          0x0000000000001040       0x48 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
-                0x0000000000001040                __libc_init_array
- .text          0x0000000000001088       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
-                0x0000000000001088                memset
- .text          0x0000000000001128       0xb0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-__atexit.o)
-                0x0000000000001128                __register_exitproc
- .text          0x00000000000011d8       0x9c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-__call_atexit.o)
-                0x00000000000011d8                __call_exitprocs
- .text          0x0000000000001274        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(_exit.o)
-                0x0000000000001274                _exit
+ .text          0x000000000000100c        0xc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-atexit.o)
+                0x000000000000100c                atexit
+ .text          0x0000000000001018       0x28 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-exit.o)
+                0x0000000000001018                exit
+ .text          0x0000000000001040       0x34 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fini.o)
+                0x0000000000001040                __libc_fini_array
+ .text          0x0000000000001074       0x48 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000000001074                __libc_init_array
+ .text          0x00000000000010bc       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x00000000000010bc                memset
+ .text          0x000000000000115c       0xb0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-__atexit.o)
+                0x000000000000115c                __register_exitproc
+ .text          0x000000000000120c       0x9c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-__call_atexit.o)
+                0x000000000000120c                __call_exitprocs
+ .text          0x00000000000012a8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(_exit.o)
+                0x00000000000012a8                _exit
  *(.init)
- .init          0x0000000000001278        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
-                0x0000000000001278                _init
- .init          0x000000000000127c        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
+ .init          0x00000000000012ac        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
+                0x00000000000012ac                _init
+ .init          0x00000000000012b0        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000000001284        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
-                0x0000000000001284                _fini
- .fini          0x0000000000001288        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
+ .fini          0x00000000000012b8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
+                0x00000000000012b8                _fini
+ .fini          0x00000000000012bc        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -824,47 +823,47 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x0000000000001290       0x3d build/em_cmu.o
- *fill*         0x00000000000012cd        0x3 
- .rodata        0x00000000000012d0       0x3e build/em_gpio.o
- *fill*         0x000000000000130e        0x2 
- .rodata        0x0000000000001310       0x20 build/em_system.o
- .rodata        0x0000000000001330        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
-                0x0000000000001330                _global_impure_ptr
+ .rodata        0x00000000000012c4       0x3d build/em_cmu.o
+ *fill*         0x0000000000001301        0x3 
+ .rodata        0x0000000000001304       0x3e build/em_gpio.o
+ *fill*         0x0000000000001342        0x2 
+ .rodata        0x0000000000001344       0x20 build/em_system.o
+ .rodata        0x0000000000001364        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
+                0x0000000000001364                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x0000000000001334        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
- .eh_frame      0x0000000000001334        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtend.o
+ .eh_frame      0x0000000000001368        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x0000000000001368        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtend.o
 
-.glue_7         0x0000000000001338        0x0
- .glue_7        0x0000000000001338        0x0 linker stubs
+.glue_7         0x000000000000136c        0x0
+ .glue_7        0x000000000000136c        0x0 linker stubs
 
-.glue_7t        0x0000000000001338        0x0
- .glue_7t       0x0000000000001338        0x0 linker stubs
+.glue_7t        0x000000000000136c        0x0
+ .glue_7t       0x000000000000136c        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000001338        0x0
- .vfp11_veneer  0x0000000000001338        0x0 linker stubs
+.vfp11_veneer   0x000000000000136c        0x0
+ .vfp11_veneer  0x000000000000136c        0x0 linker stubs
 
-.v4_bx          0x0000000000001338        0x0
- .v4_bx         0x0000000000001338        0x0 linker stubs
+.v4_bx          0x000000000000136c        0x0
+ .v4_bx         0x000000000000136c        0x0 linker stubs
 
-.iplt           0x0000000000001338        0x0
- .iplt          0x0000000000001338        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x000000000000136c        0x0
+ .iplt          0x000000000000136c        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000001338                __exidx_start = .
+                0x000000000000136c                __exidx_start = .
 
-.ARM.exidx      0x0000000000001338        0x8
+.ARM.exidx      0x000000000000136c        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000000000001338        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.exidx     0x000000000000136c        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
                                          0x10 (size before relaxing)
-                0x0000000000001340                __exidx_end = .
-                0x0000000000001340                __etext = .
+                0x0000000000001374                __exidx_end = .
+                0x0000000000001374                __etext = .
 
-.rel.dyn        0x0000000000001340        0x0
- .rel.iplt      0x0000000000001340        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0000000000001374        0x0
+ .rel.iplt      0x0000000000001374        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.data           0x0000000020000000       0x74 load address 0x0000000000001340
+.data           0x0000000020000000       0x74 load address 0x0000000000001374
                 0x0000000020000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -897,16 +896,16 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
                 0x0000000020000074                __data_end__ = .
 
 .tm_clone_table
-                0x0000000020000074        0x0 load address 0x00000000000013b4
+                0x0000000020000074        0x0 load address 0x00000000000013e8
  .tm_clone_table
                 0x0000000020000074        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020000074        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000074        0x0 load address 0x00000000000013b4
+.igot.plt       0x0000000020000074        0x0 load address 0x00000000000013e8
  .igot.plt      0x0000000020000074        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.bss            0x0000000020000074       0xb0 load address 0x00000000000013b4
+.bss            0x0000000020000074       0xb0 load address 0x00000000000013e8
                 0x0000000020000074                . = ALIGN (0x4)
                 0x0000000020000074                __bss_start__ = .
  *(.bss*)
