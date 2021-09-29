@@ -10,7 +10,7 @@ Start:
 
     // R0 er addr til led lys
     // R1 er addr til knapp
-    // R2 er hjelpe reg
+    // R2, R3, R4 er hjelpe reg for beregninger
 
     // Sett R0 til å være addr til led lys
     LDR R0, =LED_PORT
