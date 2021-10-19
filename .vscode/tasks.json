@@ -18,7 +18,8 @@
             "id": "param1",
             "description": "Exercise",
             "default": "o1",
-            "type": "promptString"
+            "options": ["o1", "o2", "o3", "o4"],
+            "type": "pickString"
         }
     ]
 }
