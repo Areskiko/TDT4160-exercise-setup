@@ -19,7 +19,7 @@ Start:
     // R7 er xor bit
     // R8 er register for innlasting av verdier
 
-    LDR R0, =0b0
+    LDR R0, =0b0    
     LDR R7, =0b1
     LDR R1, =#0
     LDR R2, =#0
@@ -47,9 +47,6 @@ Start:
     LDR R6, =SYSTICK_LOAD
     ADD R5, R5, R6
     LDR R6, =#1400000 //Klarer ikke å dele på 10 eller gange med 0.1 så hardkoder tiendedels klokkefrekvens middlertidig 
-    //LDR R6, =FREQUENCY
-    //LDR R8, =#0.1
-    //MUL R6, R6, R8 // Get ticks per tenth of a second
     STR R6, [R5]
 
     // Sett opp knapp interupt
@@ -60,15 +57,19 @@ Start:
     LDR R6, =GPIO_EXTIPSELH
     LDR R8, =GPIO_BASE
     ADD R6, R6, R8
+
     LDR R6, [R6]
     AND R5, R5, R6
+
     LDR R6, =BUTTON_PORT
     LSL R6, R6, #4
     ORR R5, R5, R6
+
     LDR R6, =GPIO_EXTIPSELH
     LDR R8, =GPIO_BASE
     ADD R6, R6, R8
     STR R5, [R6]
+    
     // Sett EXTIFALL
     LDR R5, =GPIO_BASE
     LDR R6, =GPIO_EXTIFALL
@@ -82,7 +83,6 @@ Start:
     LDR R5, =GPIO_BASE
     LDR R6, =GPIO_IFC
     ADD R5, R5, R6
-    LDR R6, [R5]
     LDR R8, =0b1
     LSL R8, R8, #9
     STR R8, [R5]
@@ -96,12 +96,6 @@ Start:
     ORR R6, R6, R8
     STR R6, [R5]
 
-    //LDR R5, =GPIO_BASE
-    //LDR R6, =GPIO_IFC
-    //ADD R5, R5, R6
-    //LDR R6, =0b1
-    //LSL R6, R6, #8
-    //STR R6, [R5]
     B Loop
 
 // Keep cpu busy
@@ -128,7 +122,6 @@ GPIO_ODD_IRQHandler:
     LDR R5, =GPIO_BASE
     LDR R6, =GPIO_IFC
     ADD R5, R5, R6
-    //LDR R6, [R5]
     LDR R8, =0b1
     LSL R8, R8, #9
     STR R8, [R5]
@@ -193,9 +186,7 @@ debug:
     LDR R5, =GPIO_BASE
     LDR R6, =GPIO_IFS
     ADD R5, R5, R6
-    //LDR R6, [R5]
     LDR R8, =0b1
-    //LSL R8, R8, #9
     STR R8, [R5]
     // EndDebug
     BX LR

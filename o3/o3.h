@@ -21,5 +21,5 @@ void time_to_string(char *timestamp, int h, int m, int s);
 
 // Prototyper
 // legg prototyper for dine funksjoner her
-
+void flip_light();
 #endif
